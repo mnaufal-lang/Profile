@@ -1,8 +1,61 @@
-```html
-<section id="about-us">
-  <h2>About Us</h2>
-  <p>
-    At LogiConnect Indonesia, our mission is to bridge the gap between remote regions and the wider Indonesian market through reliable and efficient shipping services. We are committed to ensuring that goods, no matter how perishable or time-sensitive, reach their destinations on time and in perfect condition. Our dedicated team works tirelessly to navigate the diverse archipelago, utilizing advanced logistics technology to optimize routes and enhance delivery precision. By fostering partnerships with local producers and businesses, we aim to stimulate economic growth and improve the quality of life in under-served communities. LogiConnect Indonesia is more than a logistics provider; we are a catalyst for progress, connecting Indonesia, one shipment at a time.
-  </p>
-</section>
-```
+<style>
+.hero-section {
+  background-image: url('https://source.unsplash.com/1600x900/?island,sea,ocean');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Arial', sans-serif;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+}
+</style>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Nusantara Logistics</h1>
+    <p>Delivering Across Islands</p>
+    <a href="#" class="cta-button">Get a Quote</a>
+  </div>
+</div>
