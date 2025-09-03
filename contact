@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Contact Form</title>
+<script>
+function validateForm() {
+    var name = document.forms["contactForm"]["name"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var phone = document.forms["contactForm"]["phone"].value;
+    var message = document.forms["contactForm"]["message"].value;
+
+    if (name == "" || email == "" || phone == "" || message == "") {
+        alert("All fields must be filled out");
+        return false;
+    }
+
+    if (!validateEmail(email)) {
+        alert("Please enter a valid email address");
+        return false;
+    }
+
+    if (!validatePhone(phone)) {
+        alert("Please enter a valid phone number");
+        return false;
+    }
+
+    return true;
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+function validatePhone(phone) {
+    var re = /^\d{10}$/; // Assuming a 10-digit phone number
+    return re.test(phone);
+}
+</script>
+</head>
+<body>
+
+<h2>Contact Us</h2>
+
+<form name="contactForm" action="/submit_form" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="name"><br>
+  Email: <input type="text" name="email"><br>
+  Phone: <input type="text" name="phone"><br>
+  Message: <textarea name="message" rows="4" cols="50"></textarea><br>
+  <input type="submit" value="Send Inquiry">
+</form>
+
+</body>
+</html>
